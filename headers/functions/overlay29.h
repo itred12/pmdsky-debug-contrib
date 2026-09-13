@@ -811,7 +811,7 @@ int GetAiUseItemProbability(struct entity* item_consumer, struct item* item, uin
 bool IsAdjacentToEnemy(struct entity* entity);
 bool ShouldTryEatItem(enum item_id item_id);
 int GetMaxPpWrapper(struct move* move);
-void InitMoveWrapper(undefined4 param_1, struct move* move, enum move_id move_id);
+void InitMoveWrapper(entity* target_unused, struct move* move, enum move_id move_id);
 bool MoveIsNotPhysical(enum move_id move_id);
 bool CategoryIsNotPhysical(enum move_category category_id);
 void MakeFloorOneRoom(struct entity* user);

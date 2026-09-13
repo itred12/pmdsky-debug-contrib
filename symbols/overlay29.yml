@@ -7905,11 +7905,11 @@ overlay29:
         NA: 0x231EA04
         JP: 0x231FEB0
       description: |-
-        Wrapper for InitMove which takes a superfluous parameter.
+        Wrapper for InitMove which takes a superfluous parameter-- seemingly a target?
         
-        r0: unused
+        r0: Pointer to an entity. Unused.
         r1: [output] pointer to move to initialize
-        r2: move ID
+        r2: Move ID
     - name: MoveIsNotPhysical
       address:
         EU: 0x231F480

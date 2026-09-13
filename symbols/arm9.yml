@@ -11601,6 +11601,21 @@ arm9:
         r0: Pointer to encoded value
         r1: [output] Buffer where the resulting 2-byte value will be stored.
         return: Pointer to the next byte to decode
+    - name: GetUnforgettableMoves
+      address:
+        NA: 0x2053CA0
+      description: |-
+        Fills a null-terminated buffer of move IDs forbidden from being forgotten by the target pokemon (based on the target's ID and origin).
+
+        If the target's origin and ID matches any entry in FORBIDDEN_FORGOT_MOVE_LIST, the move_id_16 tied to that entry is added to the buffer.
+
+        Appears to be responsible for making certain special episode recruited pokemon unable to forget moves they would use in future cutscenes (i.e., Sunflora's Razor Leaf, Grovyle's Dig)
+
+        r0: empty array of move_id_16 to place move ids that the target is forbidden from forgetting
+        r1: ?
+        r2: the target's ID
+        r3: the target's origin (recruited dungeon)
+        returns: ? 
     - name: GetEvoFamily
       address:
         EU: 0x205414C
