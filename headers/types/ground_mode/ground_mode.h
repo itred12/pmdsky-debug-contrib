@@ -1503,4 +1503,29 @@ struct special_actors {
 };
 ASSERT_SIZE(struct special_actors, 56);
 
+struct chimecho_assembly_struct {
+    int8_t dialogue_window_id;
+    undefined1 portrait_window_id; // Created by Rename Structure Field action
+    undefined field2_0x2;
+    undefined field3_0x3;
+    struct window_extra_info *unk_window_info;
+    undefined field5_0x8;
+    undefined field6_0x9;
+    undefined field7_0xa;
+    undefined field8_0xb;
+    struct preprocessor_args preprocessor_args;
+    struct portrait_params portrait_params; // Created by Rename Structure Field action
+    uint32_t state;                         // (Created by Rename Structure Field action) 
+    undefined field12_0x70;
+    undefined field13_0x71;
+    undefined field14_0x72;
+    undefined field15_0x73;
+    uint32_t unk_alt_state; // Created by Rename Structure Field action
+    undefined4 field17_0x78;
+    undefined field18_0x7c;
+    undefined field19_0x7d;
+    undefined2 field20_0x7e;
+};
+ASSERT_SIZE(struct chimecho_assembly_struct, 128);
+
 #endif

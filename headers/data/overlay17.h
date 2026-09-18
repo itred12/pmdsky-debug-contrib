@@ -19,4 +19,8 @@ extern struct simple_menu_id_item ASSEMBLY_SUBMENU_ITEMS_7[8];
 extern void* OVERLAY17_FUNCTION_POINTER_TABLE[42];
 extern undefined4 OV17_STATIC_INITIALIZER;
 
+extern struct chimecho_assembly_struct* CHIMECHO_ASSEMBLY_STRUCT_POINTER;
+extern enum monster_id MONSTER_CHIMECHO_PARAM_DATWORD;
+extern enum monster_id MONSTER_CHIMECHO_PORTRAIT_DATWORD;
+
 #endif
