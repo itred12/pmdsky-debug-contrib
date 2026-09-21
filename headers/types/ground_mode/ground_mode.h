@@ -987,18 +987,18 @@ struct link_shop {
     int8_t window_id_0xd;
     int8_t window_id_0xe;
     int8_t window_id_0xf;
-    bool unk_0x10;
+    bool seen_welcome; // 0x10
     undefined padding_0x11[3];
     struct preprocessor_args preprocessor_args; // 0x14
     struct portrait_params portrait_params;     // 0x64
-    undefined4
-        unk_0x74;   // Potentially also some state value; used in a switch in LinkShopMainManager.
-    uint32_t state; // 0x78: Current state of the link shop menu; used in a switch in
-                    // LinkShopMainManager. Could be an enum.
+    uint32_t
+        preinit_state; // 0x74, Potentially also some state value; used in a switch in LinkShopMainManager.
+    enum link_shop_state state; // 0x78: Current state of the link shop menu; used in a switch in
+                    // LinkShopMainManager.
     undefined4
         unk_0x7c; // Potentially also some state value; used in a switch in LinkShopMainManager.
     uint32_t next_state; // 0x80: Next value for state.
-    undefined4 unk_0x84;
+    uint32_t maybe_last_displayed_string_id; // 0x84
     undefined4 unk_0x88;
     undefined2 unk_0x8c;
     undefined2 padding_0x8e;
