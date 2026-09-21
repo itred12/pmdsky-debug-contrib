@@ -1274,6 +1274,7 @@ int GetFirstEmptyMemberIdx(int param_1);
 bool IsMonsterNotNicknamed(struct ground_monster* monster);
 void GetRecoloredGroundMonsterName(char* out, struct ground_monster* monster, char color_symbol);
 void RemoveActiveMembersFromAllTeams(void);
+void InitTeamMemberFromMentryIndex(struct team_member* target_member_ptr, int32_t target_idx)
 void RemoveActiveMembersFromSpecialEpisodeTeam(void);
 void RemoveActiveMembersFromRescueTeam(void);
 bool CheckTeamMemberIdx(int member_idx);

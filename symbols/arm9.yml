@@ -12153,6 +12153,10 @@ arm9:
         
         r0: ?
         return: team member index of the first available slot
+    - name: InitTeamMemberFromMemberIndex
+      address:
+        NA: 0x2053224
+      description: "Seemingly for initalizing a team member from an index used in the TEAM_MEMBER_TABLE"
     - name: IsMonsterNotNicknamed
       address:
         EU: 0x20563EC

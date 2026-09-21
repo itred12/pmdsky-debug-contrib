@@ -43,6 +43,263 @@ overlay18:
         
         return: Usually returns 1. Returns 4 when exiting the Link Shop.
   data:
+    - name: LINK_SHOP_STRINGID_ASKKEEPGOING
+      address: 
+        NA: 0x238BD50
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1019 (0x3FB):
+        "So do we keep going?"
+    - name: LINK_SHOP_STRINGID_WELCOME
+      address: 
+        NA: 0x238BD54
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1017 (0x3F9):
+        "Howdy! Welcome to the
+        [kind:] Link Shop![C]
+        I'll link all the moves you want
+        for just [CS:G][gold_left:0][CR][M:S0] a session!"
+    - name: LINK_SHOP_STRINGID_INFO_MENU
+      address:
+        NA: 0x238BD5C
+      legnth:
+        NA: 0x4
+      description: |-
+        String ID 1035 (0x40B):
+        "Sure thing! What do you want to
+        know?"
+    - name: LINK_SHOP_STRINGID_MOVE_SHORTCUT_INFO
+      address:
+        NA: 0x238BD60
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1036 (0x40C):
+        "When you use moves in a
+        dungeon...[K]it takes time to use the move
+        menu each and every time![C]
+        But you can take a shortcut by
+        using the Set option for instant use![C]
+        After you set a move, you can
+        press [M:B6] and [M:B2] to use it instantly![K]
+        You see? It's easy![C]
+        Just set the move while in a
+        dungeon...[K]then press [M:B6] and [M:B2] to use it![K]
+        It's so convenient![C]
+        You can also switch your set
+        move at any time in a dungeon. Check it out!"
+    - name: LINK_SHOP_STRINGID_LINKMOVE_INFO
+      address:
+        NA: 0x238BD64
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1037 (0x40D):
+        "When two or three moves are
+        linked...[K]you can unleash them as part of a
+        single, chained move! All in one turn![C]
+        For example, if the moves
+        [CS:M]Scratch[CR] and [CS:M]Growl[CR] are linked...[C]
+        Both [CS:M]Scratch[CR] and [CS:M]Growl[CR] are
+        used in one turn![K] Amazing, huh?[C]
+        If you use links...[K]well, depending
+        on which moves you link...[K]you can unleash
+        some powerful chained results![C]
+        There is a slight drawback. Your
+        Belly goes down faster if you use linked
+        moves...[C]
+        And the more moves you have
+        linked together, the faster you'll get hungry![C]
+        Here's a major detail. [K]Linked
+        moves are delivered from top to bottom!"
+    - name: LINK_SHOP_STRINGID_LINKMOVETIPS_INFO
+      address:
+        NA: 0x238BD68
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1038 (0x40E):
+        "You can split up linked moves by
+        selecting the Delink command.[C]
+        You can also switch around the
+        order in which linked moves are delivered.[C]
+        Switch them by pressing [M:B7]
+        while pressing up or down on [M:B8].[C]
+        Think about how you can combine
+        moves to create powerful chain effects! Play
+        around with links to unleash your potential!"
+    - name: LINK_SHOP_STRINGID_REMEMBERMOVES_INFO
+      address:
+        NA: 0x238BD6C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1039 (0x40F):
+        "What if you had to forget a
+        move, then later wanted it back?[K]
+        It happens a lot, right?[C]
+        That's when you need to come
+        see me for my help.[C]
+        My shocking talents can jolt you
+        into remembering forgotten moves![C]
+        You know, things slip our minds,
+        and we forget important stuff.[C]
+        All it takes is a tiny jolt![K]
+        Just a bracing zap! [K]The spark of an idea![C]
+        A flash of inspiration![K] And that's
+        how you remember a move. Ha![C]"
+    - name: LINK_SHOP_STRINGID_ACTUALLYFORGETMOVE_WITHLINK
+      address:
+        NA: 0x238BD74
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1032 (0x408):
+        "OK, here goes![C]
+        Crank it up! Bzzzzt...[K] Zzzzat![K]
+        Electivire![C]
+        Success![C]
+        You've forgotten the move
+        [move:] and any moves linked to it!"
+    - name: LINK_SHOP_STRINGID_COMEBACKWHEN_YOUREALITTLE
+      address:
+        NA: 0x238BD80
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1029 (0x405):
+        "Huh?[K] You don't have enough
+        money."
+    - name: LINK_SHOP_STRINGID_CANTFORGET_NOMOVESLEFT
+      address:
+        NA: 0x238BD80
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1030 (0x406):
+        "You won't have any moves at all
+        if you forget that move."
+    - name: LINK_SHOP_STRINGID_CONFIRMFORGETMOVE_WITHLINK
+      address:
+        NA: 0x238BD84
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1031 (0x407):
+        "So forget the [move:]
+        move and any moves linked to it?"
+    - name: LINK_SHOP_STRINGID_CONFIRMFORGETMOVE_NOLINK
+      address: 
+        NA: 0x238BD88
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1033 (0x409):
+        "So forget the move
+        [move:]?"
+    - name: LINK_SHOP_STRINGID_ACTUALLYFORGETMOVE_NOLINK
+      address: 
+        NA: 0x238BD8C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1034 (0x40A):
+        "OK, here goes![C]
+        Crank it up! Bzzzzt...[K] Zzzzat![K]
+        Electivire![C]
+        Success![C]
+        [name:] forgot the move
+        [move:]!"
+    - name: LINK_SHOP_STRINGID_NOMOVESTOREMEMBER
+      address: 
+        NA: 0x238BD90
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1021 (0x3FD):
+        "Huh? [K]You don't seem to have
+        forgotten any moves...so I can't help you
+        remember any!"
+    - name: LINK_SHOP_STRINGID_ASKREMEMBERWHICH
+      address: 
+        NA: 0x238BD94
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1022 (0x3FE):
+        "So which forgotten move do you
+        want to remember?"
+    - name: LINK_SHOP_STRINGID_ACTUALLYREMEMBERMOVE
+      address: 
+        NA: 0x238BD9C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1023 (0x3FF):
+        "So you want to remember the
+        [move:] move?[K] OK, here goes![C]
+        Crank it up! Bzzzzt...[K] Zzzzat![K]
+        Electivire![C]
+        Success![K][se_play:0] You remembered the
+        [move:] move!"
+    - name: LINK_SHOP_STRINGID_ASKFORGETANDREMEMBER_WITHLINK
+      address: 
+        NA: 0x238BDA0
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1025 (0x401):
+        "So forget the [move:]
+        move and any moves linked to it, then
+        remember the [move:1] move?"
+    - name: LINK_SHOP_STRINGID_ASKFORGETANDREMEMBER_NOLINK
+      address: 
+        NA: 0x238BDA4
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1027 (0x403):
+        "So forget the [move:]
+        move, then remember [move:1]?"
+    - name: LINK_SHOP_STRINGID_ACTUALLYFORGETANDREMEMBER_WITHLINK
+      address: 
+        NA: 0x238BDA8
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1026 (0x402):
+        "OK, here goes![C]
+        Crank it up! Bzzzzt...[K] Zzzzat![K]
+        Electivire![C]
+        Success![C]
+        You've forgotten the move
+        [move:] and any moves linked to it...
+        And remembered[se_play:0] [move:1]!"
+    - name: LINK_SHOP_STRINGID_ACTUALLYFORGETANDREMEMBER_NOLINK
+      address: 
+        NA: 0x238BDAC
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1028 (0x404):
+        "OK, here goes![C]
+        Crank it up! Bzzzzt...[K] Zzzzat![K]
+        Electivire![C]
+        Success![C]
+        [se_play:0] [name:] forgot the move
+        [move:] and remembered
+        [move:1]!"
+    - name: LINK_SHOP_STRINGID_WHOWANTSTOLINK
+      address: 
+        NA: 0x238BE20
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1028 (0x3FA):
+        "Good! Who wants to link moves?"
     - name: LINK_SHOP_WINDOW_PARAMS_1
       address:
         EU: 0x238DDB0
