@@ -11433,7 +11433,176 @@ overlay29:
         Called when the in-dungeon "others" menu is open. Does not return until the menu is closed.
         
         return: Always 0
+    - name: CanMonsterUseMoveNoPPCheck
+      address:
+        NA: 0x2324BE8
+      description: |-
+        Completely and entirely identical to CanMonsterUseMove, except this doesn't check whether the move is out of PP or not.
+        Seemingly only used in the context of two-turn moves.
+
+        r0: entity*
+        r1: move*
+        returns: 0 if unable to use move for any reason (except being out of PP), 1 if able
+    - name: IsFourthMoveAnimBitSet
+      address: 
+        NA: 0x22BFD6C
+    - name: Is2TurnsMoveInConditions
+      address:
+        NA: 0x2324D60
+      description: |-
+        Similar to Is2TurnsMove, with an extra check to account for Solar Beam only taking one turn in sunny weather.
+
+        r0: entity*
+        r1: move_id to check
+        returns: 0 if the move isn't (currently) a two-turn move, 1 if it is
+    - name: IsMove1TurnAndNotCopyingMove
+      address:
+        NA: 0x2324748
+      description: |-
+        Checks if the move pointer being sent exists, is not (currently) a two-turn move, and is not a copying move.
+
+        r0: entity*
+        r1: move*
+        returns: 1 if the move passes these checks, 0 otherwise
+    - name: GetRandomMoveIdFromDungeonMon
+      address: 
+        NA: 0x2324698
+      description: "Note: unverified. Seems to be used to implement the move Assist."
   data:
+    - name: STRINGID_CANT_USE_MOVES_HERE
+      address:
+        NA: 0x22F6054
+      length: 0x4
+      description: |-
+        String ID 3581 (0xDFD):
+        "Can't use moves here!"
+    - name: STRINGID_CRINGE
+      address:
+        NA: 0x2321A48
+      length: 0x4
+      description: |-
+        String ID 3708 (0xE7C):
+        "[string:0] is cringing!"
+    - name: STRINGID_INFATUATED
+      address:
+        NA: 0x2321A4C
+      length: 0x4
+      description: |-
+        String ID 3709 (0xE7D):
+        "[string:0] is infatuated!"
+    - name: STRINGID_PARALYZED
+      address:
+        NA: 0x2321A50
+      length: 0x4
+      description: |-
+        String ID 3704 (0xE78):
+        "[string:0] is paralyzed!"
+    - name: STRINGID_NOUSE_MYSTERYPOWER
+      address:
+        NA: 0x2321A58
+      length: 0x4
+      description: |-
+        String ID 3710 (0xE7E):
+        "But a mysterious power prevented its use!"
+    - name: STRINGID_CANTUSEMOVE_SPECIFIC
+      address:
+        NA: 0x2321A5C
+      length: 0x4
+      description: |-
+        String ID 3711 (0xE7F):
+        "The move [move:0] can't be used!"
+    - name: STRINGID_MAYBEDEBUG_ASSISTFAIL
+      address:
+        NA: 0x2321A60
+      length: 0x4
+      description: |-
+        String ID 3713 (0xE81):
+        "Assist: Failed.""
+    - name: STRINGID_COULDNT_BE_USED
+      address:
+        NA: 0x2321A64
+      length: 0x4
+      description: |-
+        String ID 3705 (0xE79):
+        "But the [CS:M]move[CR] couldn't be used!""
+    - name: STRINGID_FAILMOVE
+      address:
+        NA: 0x2321A6C
+      length: 0x4
+      description: |-
+        String ID 3702 (0xE76):
+        "The [CS:M]move[CR] failed!""
+    - name: STRINGID_FAILORB
+      address:
+        NA: 0x2321A70
+      length: 0x4
+      description: |-
+        String ID 3703 (0xE77):
+        "The [CS:I]Orb[CR] failed!""
+    - name: STRINGID_
+      address:
+        NA: 
+      length: 0x4
+      description: |-
+        String ID 0000 (0x 000):
+        "
+    - name: STRINGID_USE_NATUREPOWER
+      address:
+        NA: 0x2322D2C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3749 (0xEA5):
+        "[string:0] drew out nature's power!"
+    - name: STRINGID_MOVE_UNLEASH
+      address:
+        NA: 0x2322D30
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3750 (0xEA6):
+        "[string:0] unleashed [move:0]!"
+    - name: STRINGID_USE_ITEM
+      address:
+        NA: 0x2322D34
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3751 (0xEA7):
+        "[string:0] used the [item:0]."
+    - name: STRINGID_MUZZLED
+      address:
+        NA: 0x2322D38
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3707 (0xE7B):
+        "[string:0] is muzzled!"
+    - name: STRINGID_ITSNOUSE
+      address:
+        NA: 0x2322D3C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3705 (0xE79):
+        "But the [CS:M]move[CR] couldn't be used!"
+    - name: STRINGID_NO_ORB
+      address:
+        NA: 0x2322D40
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3706 (0xE7A):
+        "But [CS:I]Orbs[CR] are prevented from being used!"
+    - name: STRINGID_INTIMIDATED_BY_TARGET
+      address:
+        NA: 0x2322D5C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 3753 (0xEA9):
+        "[string:1] didn't attack! [string:0]'s
+        Intimidator IQ skill made it cringe!"
     - name: DUNGEON_STRUCT_SIZE
       address:
         EU:

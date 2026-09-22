@@ -3,6 +3,8 @@
 
 #include "overlay29/move_effects.h"
 
+extern uint32_t STRINGID_USE_NATUREPOWER;
+extern uint32_t STRINGID_MOVE_UNLEASH;
 extern uint32_t DUNGEON_STRUCT_SIZE;
 extern int32_t MAX_HP_CAP;
 extern uint32_t OFFSET_OF_DUNGEON_FLOOR_PROPERTIES;
