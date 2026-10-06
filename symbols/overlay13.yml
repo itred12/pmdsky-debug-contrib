@@ -241,18 +241,18 @@ overlay13:
         NA: 0x2A
         JP: 0x2A
       description: |-
-        Potential partner species.
+        Potential partner species. The last element is a terminator ID of MONSTER_NONE.
         
-        type: struct monster_id_16[21]
+        type: struct monster_id_16[22]
     - name: STARTERS_HERO_IDS
       address:
         EU: 0x238CBF8
         NA: 0x238C0B8
         JP: 0x238D620
       length:
-        EU: 0x40
-        NA: 0x40
-        JP: 0x40
+        EU: 0x42
+        NA: 0x42
+        JP: 0x42
       description: |-
         The possible hero species by personality and gender.
         
