@@ -2392,6 +2392,87 @@ enum bank_subcase {
     SBANK_WITHDRAW_END = 12,
     SBANK_UPDATE_GOLD_STATUS = 13,
 };
+ 
+// Names based off of script menu ID enum 
+enum message_menu_id {
+    MENU_UNUSED_0x0 = 0,
+    MENU_PLAYER_NAME = 1,
+    MENU_PARTNER_NAME = 2,
+    MENU_GENERIC_NAME = 3,
+    MENU_TEAM_NAME = 4,
+    MENU_UNUSED_0x5 = 5,
+    MENU_UNUSED_0x6 = 6,
+    MENU_UNUSED_0x7 = 7,
+    MENU_UNUSED_0x8 = 8,
+    MENU_UNUSED_0x9 = 9,
+    MENU_UNUSED_0xa = 10,
+    MENU_SAVE_MENU = 11,
+    MENU_KANGASKHAN_STORAGE = 12,
+    MENU_STORAGE = 13,
+    MENU_UNUSED_0xe = 14,
+    MENU_DUSKULL_BANK = 15,
+    MENU_TEAM_ASSEMBLY = 16,
+    MENU_UNUSED_0x11 = 17,
+    MENU_KECLEON_SHOP = 18,
+    MENU_KECLEON_WARES = 19,
+    MENU_LINK_SHOP = 20,
+    MENU_EVOLUTION_SEQUENCE = 21,
+    MENU_EVOLUTION_SEQUENCE2 = 22, // "Freezes the game if previous command was not menu EvolutionSequence" 
+    MENU_SWAP_SHOP = 23,
+    MENU_SWAP_SHOP2 = 24, // "Freezes the game if previous command was not menu SwapShop"
+    MENU_APPRAISAL = 25,
+    MENU_APPRAISA2 = 26, // "Freezes the game if previous command was not menu Appraisal". Typo is as-present in the script enum.
+    MENU_DAY_CARE = 27,
+    MENU_UNUSED_0x1c = 28,
+    MENU_JUICE_BAR = 29,
+    MENU_JUICE_BAR_PICK_ITEM = 30, // "Freezes the game if previous command was not menu JuiceBar" 
+    MENU_RECYCLE_SHOP = 31,
+    MENU_RECYCLE_SHOP2 = 32, // "Freezes the game if previous command was not menu RecycleShop"
+    MENU_LOTTERY = 33,
+    MENU_LOTTERY2 = 34, // "Freezes the game if previous command was not menu Lottery"
+    MENU_S_O_S_MAIL_PICKER = 35,
+    MENU_UNK_0x24 = 36,
+    MENU_UNK_0x25 = 37,
+    MENU_UNK_0x26 = 38,
+    MENU_JOB_BOARD = 39,
+    MENU_OUTLAW_BOARD = 40,
+    MENU_JOB_REWARD_TYPE = 41,
+    MENU_JOB_REWARD_NPC_AMOUNT = 42,
+    MENU_JOB_REWARD_NEXT = 43,
+    MENU_UNUSED_0x2c = 44,
+    MENU_UNUSED_0x2d = 45,
+    MENU_UNUSED_0x2e = 46,
+    MENU_UNUSED_0x2f = 47,
+    MENU_PERSONALITY_TEST = 48,
+    MENU_PERSONALITY_TEST_END = 49,
+    MENU_PERSONALITY_TEST_CONTINUE = 50,
+    MENU_UNUSED_0x33 = 51,
+    MENU_SCRIPT_DEBUG = 52,
+    MENU_SCENE_DEBUG = 53,
+    MENU_DUNGEON_INITALIZE_TEAM = 54, // "Used to be called 'DungeonResult?'"
+    MENU_DUNGEON_TEAM_RETURNS_FROM_MAP = 55,
+    MENU_DUNGEON_TEAM_DEFEATED_FROM_MAP = 56,
+    MENU_GUILD_MINI_GAME_START = 57,
+    MENU_GUILD_MINI_GAME_END = 58,
+    MENU_GUILD_MINI_GAME_FLAG_CHECK = 59,
+    MENU_GUILD_MINI_GAME_SCOREBOARD = 60,
+    MENU_DEMO_SEQUENCE1 = 61, // "TODO: What exactly does it do?"
+    MENU_DEMO_SEQUENCE2 = 62, // "TODO: What exactly does it do?" 
+    MENU_GIVE_ITEM = 63,
+    MENU_GIVE_ITEM2 = 64,
+    MENU_ACCEPT_TEAM_MEMBER = 65, // "Which team member is set with ProcessSpecial 44"
+    MENU_DUNGEON_EXPLORATION_RESULTS = 66,
+    MENU_DIARY_BIDOOF = 67,
+    MENU_DIARY_SUNFLORA = 68,
+    MENU_GUILD_F_A_Q_BOARD = 69,
+    MENU_DIARY_BIDOOF_SP_E_P = 70,
+    MENU_STAFF_CREDITS1 = 71,
+    MENU_STAFF_CREDITS2 = 72,
+    MENU_STAFF_CREDITS3 = 73,
+    MENU_STAFF_CREDITS4 = 74,
+    MENU_SPECIAL_EPISODE_DISCARD_ITEMS = 75, // "This menu actually seems unused... but it works"
+    MENU_UNK_0x4c = 76
+};
 
 // These are super long, so split them out into a separate file
 #include "version_dep_enums.h"

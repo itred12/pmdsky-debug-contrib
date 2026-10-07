@@ -16,6 +16,17 @@ overlay11:
     
     This is the "main" overlay of ground mode. The script engine is what runs the ground mode scripts contained in the SCRIPT folder, which are written in a custom scripting language. These scripts encode things like cutscenes, screen transitions, ground mode events, and tons of other things related to ground mode.
   functions:
+    - name: MaybeRunMessageMenu
+      address:
+        NA: 0x22E60BC
+      description: |-
+        Appears to be responsible for grabbing and directing calls from the message_Menu() opcode into the menus they're tied to.
+
+        r0: menu ID
+    - name: LoadPersonalityTestMenu
+      address: 
+        NA: 0x230CB88
+      description: "Grabs and initalizes the menu_load_entry associated with the personality test."
     - name: InitScriptRoutineState
       address:
         EU: 0x22DD170

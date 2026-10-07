@@ -98,6 +98,90 @@ overlay13:
         
         r0: Window ID for the debug window
   data:
+    - name: PERSONALITY_TEST_STATIC_SIZE
+      address: 
+        NA: 0x238A184
+      length:
+        NA: 0x4
+      description: |-
+        The amount of size to allocate for the personality_test struct.
+
+        type: uint32_t
+    - name: STRINGID_THANK_YOU
+      address:
+        NA: 0x238B538
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1484 (0x5CC):
+        "Thank you for answering all those questions.[P]"
+    - name: STRINGID_DONT_MOVE
+      address:
+        NA: 0x238B554
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1737 (0x6C9):
+        "Don't move your finger quite yet."
+    - name: STRINGID_PRESS_BOW
+      address:
+        NA: 0x238B548
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1710 (0x6AE):
+        "Relax. Calm yourself...[K] And now press your
+        fingertip gently on the Bow."
+    - name: STRINGID_AURA_IS
+      address:
+        NA: 0x238B550
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1713 (0x6B1):
+        "Your [CS:E]aura[CR] is..."
+    - name: STRINGID_INHALE_CALM_EXHALE_RELAXED
+      address:
+        NA: 0x238B54C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1711 (0x6AF):
+        "That's right...[W:45] Stay perfectly still...[W:60]
+        Take a deep breath...[W:90]and now exhale...[W:120]"
+    - name: STRINGID_DEBUG_QUIRKYQUIETRASHBOLD_VALUES
+      address:
+        NA: 0x238C00C
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1741 (0x6CD):
+        "Quirky[value:0:2]:Quiet[value:1:2]:Rash[value:2:2]:Bold[value:3:2]"
+    - name: STRINGID_DEBUG_IMPISHNAIVETIMIDHASTY_VALUES
+      address:
+        NA: 0x238C008
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1739 (0x6CB):
+        "Impish[value:0:2]:Naive[value:1:2]:Timid[value:2:2]:Hasty[value:3:2]"
+    - name: STRINGID_DEBUG_HARDYDOCILEBRAVEJOLLY_VALUES
+      address:
+        NA: 0x238C000
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1738 (0x6CA):
+        "Hardy[value:0:2]:Docile[value:1:2]:Brave[value:2:2]:Jolly[value:3:2]"
+    - name: STRINGID_AURA
+      address:
+        NA: 0x238B544
+      length:
+        NA: 0x4
+      description: |-
+        String ID 1709 (0x6AD):
+        "And now your [CS:E]aura[CR] will be analyzed.[C]
+        Your [CS:E]aura[CR] is the energy that you radiate![P]"
     - name: QUIZ_BORDER_COLOR_TABLE
       address:
         EU: 0x238CB50
@@ -228,9 +312,9 @@ overlay13:
         NA: 0x18
         JP: 0x18
       description: |-
-        Items for the menu for confirming partner species.
+        Items for the menu for confirming partner species. The last element is a terminator, with a blank string ID.
         
-        type: simple_menu_id_item[2]
+        type: simple_menu_id_item[3]
     - name: STARTERS_PARTNER_IDS
       address:
         EU: 0x238CBCC
@@ -312,9 +396,9 @@ overlay13:
         NA: 0x15E
         JP: 0x15E
       description: |-
-        String IDs for each of the 175 answers to the quiz questions.
+        String IDs for each of the 175 answers to the quiz questions, as well as a 176th "blank" answer as a terminator.
         
-        type: uint16_t[175]
+        type: uint16_t[176]
     - name: QUIZ_ANSWER_POINTS
       address:
         EU: 0x238CED0
